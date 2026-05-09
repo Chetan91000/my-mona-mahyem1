@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Mona Mayhem</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
@@ -36,12 +36,12 @@
 			</section>
 		</main>
 		<script>
-			const page = document.querySelector(".battle-page");
+			const battlePage = document.querySelector(".battle-page");
 			const toggle = document.querySelector("#theme-toggle");
-			if (page && toggle) {
+			if (battlePage && toggle) {
 				toggle.addEventListener("click", () => {
-					const nextTheme = page.dataset.theme === "classic" ? "alt" : "classic";
-					page.dataset.theme = nextTheme;
+					const nextTheme = battlePage.dataset.theme === "classic" ? "alt" : "classic";
+					battlePage.dataset.theme = nextTheme;
 					toggle.textContent =
 						nextTheme === "alt"
 							? "Switch to Classic Theme"
